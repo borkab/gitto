@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"unicode/utf8"
 )
 
 func main() {
@@ -16,4 +17,10 @@ func main() {
 
 	//but it doesn't return 7 as written in the exercise
 	//the output is correct, 5
+	countRunes()
+}
+func countRunes() {
+
+	lenght := utf8.RuneCountInString(os.Args[1])
+	fmt.Println(lenght)
 }
