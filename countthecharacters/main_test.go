@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestMain(t *testing.T) {
+func TestCountChars(t *testing.T) {
 
 	got := countChars()
 	want := 5 //input:borka
