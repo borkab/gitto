@@ -17,7 +17,7 @@ func TestCountChars(t *testing.T) {
 func TestCountRunes(t *testing.T) {
 	text := "szeretetunikornis"
 	got := countRunes(text)
-	want := 5
+	want := 17
 
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
