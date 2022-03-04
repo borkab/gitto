@@ -1,30 +1,27 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"unicode/utf8"
 )
 
 func main() {
-	countRunes()
-	countChars()
+	text := os.Args[1]
+	fmt.Println(countRunes(text))
+	fmt.Println(countChars(text))
+
 }
 
-func countChars() int {
-	// Currently it returns 7
-	// Because, it counts the bytes...
-	// It should count the runes (codepoints) instead.
-	//
-	// When you run it with "borka", it should return 5 not 7.
-	length := len(os.Args[1])
+func countChars(text string) int {
+
+	length := len(text)
 	return length
 
-	//but it doesn't return 7 as written in the exercise
-	//the output is correct, 5
 }
 
-func countRunes() int {
+func countRunes(text string) int {
 
-	lenght := utf8.RuneCountInString(os.Args[1])
+	lenght := utf8.RuneCountInString(text)
 	return lenght
 }
