@@ -1,23 +1,24 @@
 package main
 
 import (
-	"os"
 	"testing"
 )
 
 func TestCountChars(t *testing.T) {
-	text := os.Args[1]
+	text := "Borka"
 	got := countChars(text)
-	want := 5 //input:borka
+	want := 5
 
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
 	}
 }
+
 func TestCountRunes(t *testing.T) {
-	text := os.Args[1]
+	text := "szeretetunikornis"
 	got := countRunes(text)
-	want := 5 //input:borka
+	want := 5
+
 	if got != want {
 		t.Errorf("got %d want %d", got, want)
 	}
