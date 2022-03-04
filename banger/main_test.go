@@ -2,27 +2,34 @@ package main
 
 import "testing"
 
-func testBanger(t *testing.T) {
-	got := banger()
-	want := "miniponi!!!!!!!!"
+func TestBanger(t *testing.T) {
+	msg := "Luke"
+	got := banger(msg)
+	want := "Luke!!!!"
 
 	if got != want {
-		t.Errorf("got %v want %v", got, want)
-
+		t.Errorf("got %q want %q", got, want)
 	}
 }
 
-func testBangerUni(t *testing.T) {
-	got := bangerUni()
-	want := "miniponi!!!!!!!!"
+func TestBangerUni(t *testing.T) {
+	msg := "Skywalker"
+	got := bangerUni(msg)
+	want := "Skywalker!!!!!!!!!"
 
 	if got != want {
-		t.Errorf("got %v want %v", got, want)
-
+		t.Errorf("got %q want %q", got, want)
 	}
 }
 
-//[borkab@severest banger]$ go test -v
-//testing: warning: no tests to run
-//PASS
-//ok      learngo/github/learngo/gitto/banger     0.003s
+/*
+[borkab@severest banger]$ go test -v
+# learngo/github/learngo/gitto/banger [learngo/github/learngo/gitto/banger.test]
+./main_test.go:7:15: too many arguments in call to banger
+        have (string)
+        want ()
+./main_test.go:18:18: too many arguments in call to bangerUni
+        have (string)
+        want ()
+FAIL    learngo/github/learngo/gitto/banger [build failed]
+*/
