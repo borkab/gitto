@@ -5,6 +5,17 @@ import (
 	"strings"
 )
 
+// EXERCISE: Right Trim It
+//
+//  1. Look at the documentation of strings package
+//  2. Find a function that trims the spaces from
+//     only the right-most part of the given string
+//  3. Trim it from the right part only
+//  4. Print the number of characters it contains.
+//
+// RESTRICTION
+//  Your program should work with unicode string values.
+
 func main() {
 	m := "tunyacsap             "
 	fmt.Println(lenSplit(Split((rightTrimIt(m)), "")))
