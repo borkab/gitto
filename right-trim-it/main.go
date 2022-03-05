@@ -37,3 +37,14 @@ func lenSplit(sp []string) int {
 	ls := len(sp)
 	return ls
 }
+
+/*
+func main() {
+	name := "inanç           "
+
+	name = strings.TrimRight(name, " ")
+	l := utf8.RuneCountInString(name)
+
+	fmt.Println(l)
+}
+*/
