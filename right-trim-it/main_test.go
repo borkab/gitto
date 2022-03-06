@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestRighgtTrimIt(t *testing.T) {
 	n := "milka            "
@@ -18,7 +21,7 @@ func TestSplit(t *testing.T) {
 	got := Split(n, "")
 	want := []string{"m", "i", "l", "k", "a"}
 
-	if got != want { //then how to test a func what returns a slice?
+	if reflect.DeepEqual(got, want) {
 		t.Errorf("got %v want %v", got, want)
 	}
 }
