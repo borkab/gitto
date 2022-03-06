@@ -21,8 +21,9 @@ func TestSplit(t *testing.T) {
 	got := Split(n, "")
 	want := []string{"m", "i", "l", "k", "a"}
 
-	if reflect.DeepEqual(got, want) {
+	if !reflect.DeepEqual(got, want) {
 		t.Errorf("got %v want %v", got, want)
+
 	}
 	/*
 		[borkab@severest right-trim-it]$ go test
