@@ -13,7 +13,7 @@ func main() {
 	//change the  following data types to the correct
 	//data types where appropriate.
 	var (
-		width  uint16
+		width  uint16 //it was just to change the type uint8 to uint16 here...
 		height uint16
 	)
 
