@@ -14,6 +14,7 @@ func main() {
 
 	if len(in) != 2 {
 		fmt.Println("Give me a month name")
+		return
 	}
 
 	longmonths := []string{"january", "march", "may", "july", "august", "october", "december"}
