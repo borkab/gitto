@@ -17,7 +17,7 @@ func main() {
 }
 
 func sum(a int) int {
-	for i := 0; i <= 10; i++ {
+	for i := 1; i <= 10; i++ {
 		a += i
 	}
 	return a
