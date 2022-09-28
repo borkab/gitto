@@ -43,14 +43,15 @@ func main() {
 	var sum int
 
 	for i := min; i <= max; i++ {
-		sum += i
-		if i%2 == 0 {
-			fmt.Print(i)
-			if i < max {
-				fmt.Print(" + ")
-			}
+		if i%2 != 0 {
+			continue
 		}
-		continue
+		sum += i
+
+		fmt.Print(i)
+		if i < max {
+			fmt.Print(" + ")
+		}
 
 	}
 	fmt.Printf(" = %d\n", sum)
